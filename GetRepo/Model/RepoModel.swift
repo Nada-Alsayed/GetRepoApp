@@ -14,6 +14,7 @@ struct RepoModel:Codable{
     let name: String
     let owner: Owner
     let welcomePrivate: Bool
+    let html_url: String
     init(){
         id = 0
         nodeID = ""
@@ -21,6 +22,7 @@ struct RepoModel:Codable{
         name = ""
         owner = Owner()
         welcomePrivate = false
+        html_url = ""
     }
     
     enum CodingKeys: String, CodingKey {
@@ -30,6 +32,7 @@ struct RepoModel:Codable{
         case fullName = "full_name"
         case welcomePrivate = "private"
         case owner
+        case html_url
     }
     
 }
@@ -52,12 +55,12 @@ struct Owner: Codable {
 }
 
 struct RepositoryDetails: Codable {
-    let createdAt: Date
+    let createdAt: String
     enum CodingKeys: String, CodingKey {
         case createdAt = "created_at"
     }
     init(){
-        createdAt = Date()
+        createdAt = ""
     }
 }
 //class RepoModel:Codable{

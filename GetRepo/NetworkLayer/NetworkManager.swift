@@ -10,9 +10,13 @@ import Alamofire
 
 class NetworkManager : NetworkManagerProtocol{
     static var shared = NetworkManager()
+
+    let headers: HTTPHeaders = [
+        "Authorization": "Bearer \(Strings.TOKEN)"
+        ]
     private init(){}
     func fetchAllRepos<T: Decodable>(url: URL, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void){
-        AF.request(url).responseData { response in
+        AF.request(url, headers: headers).responseData { response in
                 switch response.result {
                 case .success(let data):
                     do {
