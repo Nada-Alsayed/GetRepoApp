@@ -26,8 +26,6 @@ class HomeVC: UIViewController {
         setTableCinfigration()
         getRepositories()
         getTime()
-//        let inputDateString = "2008-01-14T14:44:23Z"
-//        print("222\(Date_Formatter.formatDate(inputDateString))")
     }
     
     func setTableCinfigration(){
@@ -45,11 +43,11 @@ class HomeVC: UIViewController {
         }
         viewModel.getData(url: URL_Creator.repos_URL())
     }
+    
     func getTime(){
         viewModel.bindCreatedTimeToView = {[weak self] in
             self?.createdTimeArray.append(self?.viewModel.repository ?? RepositoryDetails())
             if self?.createdTimeArray.count == self?.arrayOfRepos.count {
-//                print("222\(Date_Formatter.formatDate((self?.createdTimeArray[0].createdAt)!))")
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
@@ -83,22 +81,12 @@ class HomeVC: UIViewController {
 extension HomeVC :UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: Strings.CELL_REPO_ID, for: indexPath) as!TableViewCell
-        
         cell.ownerName.text = self.paginationarray[indexPath.row].owner.login
         cell.repoName.text = self.paginationarray[indexPath.row].fullName
         cell.ownerAvatar.kf.setImage(with:URL(string: paginationarray[indexPath.row].owner.avatarURL))
-       
         cell.ownerAvatar.layer.cornerRadius = 15
-        
         cell .creationDate.text = Date_Formatter.formatDate(self.createdTimeArray[indexPath.row].createdAt)
-//        var date : Date = Date()
-//        viewModel.bindResultToView = {[weak self] in
-//            date = self?.viewModel.repository.createdAt ?? Date()
-//            cell.creationDate.text = "\(date)"
-//        }
-//        viewModel.getRepoDetails(url: URL_Creator.repoDetails(ownerName: self.paginationarray[indexPath.row].owner.login, repoName: self.paginationarray[indexPath.row].name))
         cell.view.layer.cornerRadius = 15
         cell.view.layer.masksToBounds = true
         
@@ -110,7 +98,7 @@ extension HomeVC :UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(150)
+        return CGFloat(170)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

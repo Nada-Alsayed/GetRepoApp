@@ -19,52 +19,71 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-sd-IZt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" text="owner" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFw-rw-bd8">
-                        <rect key="frame" x="145" y="17" width="171" height="20.333333333333329"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2B-2b-S17">
+                                <rect key="frame" x="131" y="12" width="38" height="16"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <color key="textColor" red="0.5169896598" green="0.5169896598" blue="0.5169896598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQc-Yl-Xea">
+                                <rect key="frame" x="131" y="71" width="110" height="16"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <color key="textColor" red="0.5169896598" green="0.5169896598" blue="0.5169896598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.088717296870067908" green="0.088717296870067908" blue="0.088717296870067908" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="171" id="sdf-fh-kfu"/>
+                            <constraint firstItem="oQc-Yl-Xea" firstAttribute="leading" secondItem="r2B-2b-S17" secondAttribute="leading" id="vie-EZ-p0y"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.77244782450000005" green="0.64976209399999996" blue="0.67495286460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="247" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" text="owner" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFw-rw-bd8">
+                        <rect key="frame" x="139" y="34" width="171" height="18.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                        <color key="textColor" systemColor="systemGray5Color"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repoName" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atd-4S-N1X">
-                        <rect key="frame" x="145" y="75" width="171" height="20.333333333333329"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.77244782450000005" green="0.64976209399999996" blue="0.67495286460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" text="repoName" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atd-4S-N1X">
+                        <rect key="frame" x="139" y="93" width="171" height="17.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                        <color key="textColor" systemColor="systemGray5Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ock-gC-WeB">
-                        <rect key="frame" x="145" y="132.66666666666666" width="165" height="20.333333333333343"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.77244782450000005" green="0.64976209399999996" blue="0.67495286460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
+                        <rect key="frame" x="139" y="137.33333333333334" width="171" height="18.666666666666657"/>
+                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                        <color key="textColor" systemColor="systemGray5Color"/>
+                        <color key="highlightedColor" systemColor="systemGray3Color"/>
+                        <size key="shadowOffset" width="-1" height="-1"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" verticalCompressionResistancePriority="756" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-UK-TPJ">
-                        <rect key="frame" x="12" y="11" width="115" height="148"/>
+                        <rect key="frame" x="6" y="6" width="115" height="158"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="115" id="wr1-cp-abA"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" systemColor="systemGrayColor"/>
                 <constraints>
-                    <constraint firstItem="Atd-4S-N1X" firstAttribute="leading" secondItem="ock-gC-WeB" secondAttribute="leading" id="0a1-AJ-MyZ"/>
+                    <constraint firstItem="Atd-4S-N1X" firstAttribute="top" secondItem="oQc-Yl-Xea" secondAttribute="bottom" constant="6" id="5na-3B-8nV"/>
+                    <constraint firstItem="r2B-2b-S17" firstAttribute="leading" secondItem="CT7-UK-TPJ" secondAttribute="trailing" constant="10" id="7HP-55-Xac"/>
                     <constraint firstAttribute="bottom" secondItem="DG3-sd-IZt" secondAttribute="bottom" id="9k0-ZF-3HP"/>
-                    <constraint firstItem="ock-gC-WeB" firstAttribute="bottom" secondItem="CT7-UK-TPJ" secondAttribute="bottom" constant="-6" id="FLZ-mo-8ff"/>
-                    <constraint firstItem="CT7-UK-TPJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="GUM-Ap-WFC"/>
+                    <constraint firstItem="CT7-UK-TPJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="GUM-Ap-WFC"/>
+                    <constraint firstItem="ock-gC-WeB" firstAttribute="trailing" secondItem="Atd-4S-N1X" secondAttribute="trailing" id="Gan-2q-XwY"/>
                     <constraint firstAttribute="trailing" secondItem="DG3-sd-IZt" secondAttribute="trailing" id="L6A-GJ-O0f"/>
+                    <constraint firstAttribute="trailing" secondItem="bFw-rw-bd8" secondAttribute="trailing" constant="10" id="NAG-05-XYc"/>
                     <constraint firstItem="DG3-sd-IZt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ood-2B-S3v"/>
-                    <constraint firstItem="Atd-4S-N1X" firstAttribute="centerY" secondItem="CT7-UK-TPJ" secondAttribute="centerY" id="QRw-Zo-7cA"/>
-                    <constraint firstItem="CT7-UK-TPJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="RfD-Xw-cZo"/>
-                    <constraint firstItem="bFw-rw-bd8" firstAttribute="top" secondItem="CT7-UK-TPJ" secondAttribute="top" constant="6" id="Y9e-GL-Txw"/>
-                    <constraint firstItem="Atd-4S-N1X" firstAttribute="trailing" secondItem="ock-gC-WeB" secondAttribute="trailing" constant="6" id="aCf-lX-G2k"/>
-                    <constraint firstAttribute="bottom" secondItem="CT7-UK-TPJ" secondAttribute="bottom" constant="11" id="cUu-qh-CEC"/>
-                    <constraint firstItem="bFw-rw-bd8" firstAttribute="trailing" secondItem="Atd-4S-N1X" secondAttribute="trailing" id="eZA-Q5-WnI"/>
-                    <constraint firstItem="bFw-rw-bd8" firstAttribute="leading" secondItem="Atd-4S-N1X" secondAttribute="leading" id="gJn-ea-qfT"/>
-                    <constraint firstItem="ock-gC-WeB" firstAttribute="leading" secondItem="CT7-UK-TPJ" secondAttribute="trailing" constant="18" id="paV-JN-hl5"/>
+                    <constraint firstItem="Atd-4S-N1X" firstAttribute="leading" secondItem="bFw-rw-bd8" secondAttribute="leading" id="QjB-Ov-QJ6"/>
+                    <constraint firstItem="CT7-UK-TPJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="RfD-Xw-cZo"/>
+                    <constraint firstItem="ock-gC-WeB" firstAttribute="leading" secondItem="Atd-4S-N1X" secondAttribute="leading" id="WDg-Ax-TTi"/>
+                    <constraint firstItem="bFw-rw-bd8" firstAttribute="top" secondItem="r2B-2b-S17" secondAttribute="bottom" constant="6" id="ZGN-TU-jqv"/>
+                    <constraint firstAttribute="bottom" secondItem="CT7-UK-TPJ" secondAttribute="bottom" constant="6" id="cUu-qh-CEC"/>
+                    <constraint firstItem="Atd-4S-N1X" firstAttribute="trailing" secondItem="bFw-rw-bd8" secondAttribute="trailing" id="h7U-zZ-fkx"/>
+                    <constraint firstItem="oQc-Yl-Xea" firstAttribute="centerY" secondItem="CT7-UK-TPJ" secondAttribute="centerY" constant="-6" id="kbE-qg-XMx"/>
+                    <constraint firstItem="r2B-2b-S17" firstAttribute="top" secondItem="CT7-UK-TPJ" secondAttribute="top" constant="6" id="mKd-Rq-coN"/>
+                    <constraint firstItem="bFw-rw-bd8" firstAttribute="leading" secondItem="r2B-2b-S17" secondAttribute="leading" constant="8" id="mgI-kV-NIX"/>
+                    <constraint firstItem="ock-gC-WeB" firstAttribute="bottom" secondItem="CT7-UK-TPJ" secondAttribute="bottom" constant="-8" id="tbf-Tg-W3g"/>
                     <constraint firstItem="DG3-sd-IZt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vz4-jq-5jg"/>
                 </constraints>
             </tableViewCellContentView>
@@ -81,8 +100,14 @@
     </objects>
     <resources>
         <image name="1" width="460" height="460"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
