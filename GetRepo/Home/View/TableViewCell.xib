@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="GetRepo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-sd-IZt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" text="owner" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFw-rw-bd8">
+                        <rect key="frame" x="145" y="17" width="171" height="20.333333333333329"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="171" id="sdf-fh-kfu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.77244782450000005" green="0.64976209399999996" blue="0.67495286460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repoName" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atd-4S-N1X">
+                        <rect key="frame" x="145" y="65" width="171" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.77244782450000005" green="0.64976209399999996" blue="0.67495286460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ock-gC-WeB">
+                        <rect key="frame" x="145" y="112.66666666666667" width="163" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.77244782450000005" green="0.64976209399999996" blue="0.67495286460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" verticalCompressionResistancePriority="756" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-UK-TPJ">
+                        <rect key="frame" x="12" y="11" width="115" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="wr1-cp-abA"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Atd-4S-N1X" firstAttribute="leading" secondItem="ock-gC-WeB" secondAttribute="leading" id="0a1-AJ-MyZ"/>
+                    <constraint firstAttribute="bottom" secondItem="DG3-sd-IZt" secondAttribute="bottom" id="9k0-ZF-3HP"/>
+                    <constraint firstItem="ock-gC-WeB" firstAttribute="bottom" secondItem="CT7-UK-TPJ" secondAttribute="bottom" constant="-6" id="FLZ-mo-8ff"/>
+                    <constraint firstItem="CT7-UK-TPJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="GUM-Ap-WFC"/>
+                    <constraint firstAttribute="trailing" secondItem="DG3-sd-IZt" secondAttribute="trailing" id="L6A-GJ-O0f"/>
+                    <constraint firstItem="DG3-sd-IZt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ood-2B-S3v"/>
+                    <constraint firstItem="Atd-4S-N1X" firstAttribute="centerY" secondItem="CT7-UK-TPJ" secondAttribute="centerY" id="QRw-Zo-7cA"/>
+                    <constraint firstItem="CT7-UK-TPJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="RfD-Xw-cZo"/>
+                    <constraint firstItem="bFw-rw-bd8" firstAttribute="top" secondItem="CT7-UK-TPJ" secondAttribute="top" constant="6" id="Y9e-GL-Txw"/>
+                    <constraint firstItem="Atd-4S-N1X" firstAttribute="trailing" secondItem="ock-gC-WeB" secondAttribute="trailing" constant="8" id="aCf-lX-G2k"/>
+                    <constraint firstAttribute="bottom" secondItem="CT7-UK-TPJ" secondAttribute="bottom" constant="11" id="cUu-qh-CEC"/>
+                    <constraint firstItem="bFw-rw-bd8" firstAttribute="trailing" secondItem="Atd-4S-N1X" secondAttribute="trailing" id="eZA-Q5-WnI"/>
+                    <constraint firstItem="bFw-rw-bd8" firstAttribute="leading" secondItem="Atd-4S-N1X" secondAttribute="leading" id="gJn-ea-qfT"/>
+                    <constraint firstItem="ock-gC-WeB" firstAttribute="leading" secondItem="CT7-UK-TPJ" secondAttribute="trailing" constant="18" id="paV-JN-hl5"/>
+                    <constraint firstItem="DG3-sd-IZt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vz4-jq-5jg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="creationDate" destination="ock-gC-WeB" id="4O0-3F-Vcc"/>
+                <outlet property="ownerAvatar" destination="CT7-UK-TPJ" id="DFo-PM-xrf"/>
+                <outlet property="ownerName" destination="bFw-rw-bd8" id="e2z-o0-jgD"/>
+                <outlet property="repoName" destination="Atd-4S-N1X" id="to6-YN-gQu"/>
+                <outlet property="view" destination="DG3-sd-IZt" id="Hj5-rd-5vH"/>
+            </connections>
+            <point key="canvasLocation" x="10.687022900763358" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="1" width="460" height="460"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
