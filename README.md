@@ -9,3 +9,4 @@ Before running the app, you need to install the required dependencies using Coco
 
 ## AppImages
 ![homepage](https://github.com/Nada-Alsayed/GetRepoApp/assets/120715650/4ec7ac14-6d4c-4fe8-980f-c6bc8ce2e664)
+![launchscreen](https://github.com/Nada-Alsayed/GetRepoApp/assets/120715650/a2ecfb33-56f4-4f47-b6ea-ac664a2ec1d4)
