@@ -10,6 +10,8 @@ import Kingfisher
 
 class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     
     var createdTimeArray :[RepositoryDetails] = []
     var arrayOfRepos :[RepoModel] = []
@@ -20,15 +22,22 @@ class HomeVC: UIViewController {
     var paginationarray:[RepoModel] = []
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = HomeViewModel(apiFetchHandler: NetworkManager.shared)
-        setTableCinfigration()
-        getRepositories()
-        getTime()
+        showIndicator()
+            self.setTableCinfigration()
+            self.getRepositories()
+            self.getTime()
     }
-    
+    func showIndicator(){
+        indicator.startAnimating()
+        indicator.isHidden = false
+    }
+    func hideIndicator(){
+        indicator.stopAnimating()
+        indicator.isHidden = true
+    }
     func setTableCinfigration(){
         tableView.register(UINib(nibName: Strings.CELL_REPO_ID, bundle: nil), forCellReuseIdentifier: Strings.CELL_REPO_ID)
     }
@@ -50,6 +59,7 @@ class HomeVC: UIViewController {
             self?.createdTimeArray.append(self?.viewModel.repository ?? RepositoryDetails())
             if self?.createdTimeArray.count == self?.arrayOfRepos.count {
                 DispatchQueue.main.async {
+                    self?.hideIndicator()
                     self?.tableView.reloadData()
                 }
             }
@@ -83,13 +93,15 @@ extension HomeVC :UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Strings.CELL_REPO_ID, for: indexPath) as!TableViewCell
+       
             cell.ownerName.text = self.paginationarray[indexPath.row].owner.login
             cell.repoName.text = self.paginationarray[indexPath.row].fullName
             cell.ownerAvatar.kf.setImage(with:URL(string: paginationarray[indexPath.row].owner.avatarURL))
             cell .creationDate.text = Date_Formatter.formatDate(self.createdTimeArray[indexPath.row].createdAt)
-            
+        
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paginationarray.count
@@ -106,5 +118,6 @@ extension HomeVC :UITableViewDelegate,UITableViewDataSource{
             }
         }
     }
-    
 }
+
+ 

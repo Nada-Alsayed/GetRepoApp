@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7AW-i9-v4A">
-                                <rect key="frame" x="6" y="105.66666666666669" width="381" height="712.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <rect key="frame" x="6" y="108.33333333333331" width="381" height="709.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="linkColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="LUW-2Q-acz"/>
@@ -26,17 +26,28 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU8-1d-oce">
-                                <rect key="frame" x="16" y="69" width="119" height="28.666666666666671"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <rect key="frame" x="16" y="69" width="129.66666666666666" height="31.333333333333329"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.088717296870000004" green="0.088717296870000004" blue="0.088717296870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="q9v-kU-bXJ">
+                                <rect key="frame" x="166.66666666666666" y="396" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VAp-Mx-5km"/>
+                                    <constraint firstAttribute="width" constant="60" id="tMJ-uG-kOf"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7AW-i9-v4A" secondAttribute="bottom" id="8As-Yy-HCK"/>
+                            <constraint firstItem="q9v-kU-bXJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hzw-s9-mWO"/>
                             <constraint firstItem="7AW-i9-v4A" firstAttribute="top" secondItem="sU8-1d-oce" secondAttribute="bottom" constant="8" symbolic="YES" id="XMc-4z-jBN"/>
+                            <constraint firstItem="q9v-kU-bXJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hzQ-2I-uJ0"/>
                             <constraint firstItem="sU8-1d-oce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j1j-Xu-oIq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7AW-i9-v4A" secondAttribute="trailing" constant="6" id="qxI-vl-4VX"/>
                             <constraint firstItem="sU8-1d-oce" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="tJI-r5-GEp"/>
@@ -44,6 +55,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="q9v-kU-bXJ" id="7iT-2R-VKx"/>
                         <outlet property="tableView" destination="7AW-i9-v4A" id="XFz-3O-rxC"/>
                     </connections>
                 </viewController>
@@ -56,8 +68,8 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

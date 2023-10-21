@@ -20,6 +20,7 @@ class TableViewCell: UITableViewCell {
         view.layer.cornerRadius = 15
         view.layer.masksToBounds = true
     }
+    
     override var frame: CGRect{
         get{
             return super.frame
