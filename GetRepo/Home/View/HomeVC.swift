@@ -11,14 +11,15 @@ import Kingfisher
 class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    var createdTimeArray :[RepositoryDetails] = []
+    var arrayOfRepos :[RepoModel] = []
     var viewModel : HomeViewModel!
-    var arrayOfRepos = [RepoModel]()
+
     var repositoriesPerPages = 10
     var maxNumber = 10
-    var createdTimeArray :[RepositoryDetails] = []
-    var repositoriesTime:[RepositoryDetails] = []
-    
     var paginationarray:[RepoModel] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +35,14 @@ class HomeVC: UIViewController {
     
     func getRepositories(){
         viewModel.bindRepositoriesToView = {[weak self] in
-            
-            self?.arrayOfRepos = self?.viewModel.res ?? []
+
+            self?.arrayOfRepos = self?.viewModel.repositories ?? []
             self?.maxNumber = self?.arrayOfRepos.count ?? 0
             for i in 0..<10 {
                 self?.paginationarray.append((self?.arrayOfRepos[i])!)
             }
         }
-        viewModel.getData(url: URL_Creator.repos_URL())
+        viewModel.getData(url: URL_Creator.repositorois_URL())
     }
     
     func getTime(){
@@ -54,7 +55,7 @@ class HomeVC: UIViewController {
             }
         }
     }
-    
+    // simulate pagination
     func setPaginationArray(repositoriesPerPages:Int){
         if repositoriesPerPages >= maxNumber {
             return
@@ -82,14 +83,11 @@ extension HomeVC :UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Strings.CELL_REPO_ID, for: indexPath) as!TableViewCell
-        cell.ownerName.text = self.paginationarray[indexPath.row].owner.login
-        cell.repoName.text = self.paginationarray[indexPath.row].fullName
-        cell.ownerAvatar.kf.setImage(with:URL(string: paginationarray[indexPath.row].owner.avatarURL))
-        cell.ownerAvatar.layer.cornerRadius = 15
-        cell .creationDate.text = Date_Formatter.formatDate(self.createdTimeArray[indexPath.row].createdAt)
-        cell.view.layer.cornerRadius = 15
-        cell.view.layer.masksToBounds = true
-        
+            cell.ownerName.text = self.paginationarray[indexPath.row].owner.login
+            cell.repoName.text = self.paginationarray[indexPath.row].fullName
+            cell.ownerAvatar.kf.setImage(with:URL(string: paginationarray[indexPath.row].owner.avatarURL))
+            cell .creationDate.text = Date_Formatter.formatDate(self.createdTimeArray[indexPath.row].createdAt)
+            
         return cell
     }
     
@@ -108,4 +106,5 @@ extension HomeVC :UITableViewDelegate,UITableViewDataSource{
             }
         }
     }
+    
 }

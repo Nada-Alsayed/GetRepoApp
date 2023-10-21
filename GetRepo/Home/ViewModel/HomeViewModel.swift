@@ -8,13 +8,17 @@
 import Foundation
 class HomeViewModel{
     private var apiFetchHandler : NetworkManagerProtocol!
+    
+    private var currentPage = 1
+    private var isFetchingData = false
+    
     var bindRepositoriesToView : (()->()) = {}
     var bindCreatedTimeToView : (()->()) = {}
     
-    var res = [RepoModel]() {
+    var repositories = [RepoModel]() {
         didSet{
             DispatchQueue.global().async {
-                for i in self.res {
+                for i in self.repositories {
                     self.getRepoDetails(url:  URL_Creator.repoDetails(ownerName: i.owner.login, repoName: i.name))
                 }
             }
@@ -36,7 +40,7 @@ class HomeViewModel{
         apiFetchHandler.fetchAllRepos(url: url, responseType: [RepoModel].self) {result in
             switch result {
             case .success(let repos):
-                self.res = repos
+                self.repositories = repos
             case .failure(let error):
                 print("Failed  Date: \(error)")
             }
@@ -53,7 +57,8 @@ class HomeViewModel{
             }
         }
     }
-
+    
 }
+
 
 

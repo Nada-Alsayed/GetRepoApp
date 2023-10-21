@@ -8,20 +8,17 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
     @IBOutlet weak var ownerName: UILabel!
-    
     @IBOutlet weak var repoName: UILabel!
-    
     @IBOutlet weak var creationDate: UILabel!
-    
     @IBOutlet weak var ownerAvatar: UIImageView!
-    
     @IBOutlet weak var view: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        ownerAvatar.layer.cornerRadius = 15
+        view.layer.cornerRadius = 15
+        view.layer.masksToBounds = true
     }
     override var frame: CGRect{
         get{
@@ -39,8 +36,6 @@ class TableViewCell: UITableViewCell {
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
