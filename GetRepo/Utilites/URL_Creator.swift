@@ -8,7 +8,6 @@
 import Foundation
 class URL_Creator{
     static private let baseURL = "https://api.github.com"
-    //repositories
     
     static func repositorois_URL()->URL{
         return URL(string: baseURL+"/repositories")!
